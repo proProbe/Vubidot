@@ -8,11 +8,6 @@
 	<div id="navbar-wrapper">
 		<div class="navbar navbar-default">
 			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand">
-						<!-- <img src="http://www.modernwastemanagement.com/wp-content/uploads/2015/10/Drawing-1.png"> -->
-					</a>
-				</div>
 				<div id="links-wrapper">
 					<ul class="nav navbar-nav">
 						<li><a href="#">Home</a></li>
@@ -21,13 +16,27 @@
 						<li><a href="#">Contact</a></li>
 					</ul>
 				</div>
+				<form class="navbar-form">
+					<div class="btn-group">
+						<button class="btn btn-success" ng-click="main.updateData()">Refresh</button>
+						<button class="btn btn-primary" ng-click="main.addPoint()">Add point</button>
+					</div>
+					
+				</form>
 			</div>
 		</div>
 	</div>
 	<div class="container-fluid">
-	{{main.dataSource1}}
-	<!-- <highchart id="chart1" config="main.lineConfig"></highchart> -->
-	<highchart id="chart2" config="main.chartConfig2"></highchart>
+		<!-- <button class="btn btn-success" ng-click="main.addData()">Add data</button> -->
+		<div class="col-sm-6">
+			<highchart id="chart1" config="main.chartConfig"></highchart>
+
+		</div>
+		<div class="col-sm-6">
+
+			<highchart id="chart2" config="main.lineConfig"></highchart>
+		</div>
+
 
 		<!-- <div ng-view></div> -->
 
